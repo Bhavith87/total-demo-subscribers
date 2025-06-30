@@ -1,0 +1,390 @@
+body, .container-fluid {
+  font-family: 'Segoe UI', sans-serif;
+}
+.form-title {
+  color: #1565c0;
+  font-weight: bold;
+  border-bottom: 2px solid #64b5f6;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+.subscription-wrapper{
+     background: linear-gradient(135deg, #e1f5fe, #ffffff);
+  min-height: 100vh;
+  padding: 2rem;
+}
+.animated-header {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #2196f3, #1e88e5);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.animated-header .diagonal-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  transform-origin: center;
+  animation: rotateLine 8s linear infinite;
+  z-index: 1; /* stay behind the text */
+}
+
+/* Keyframe for continuous rotation */
+@keyframes rotateLine {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+
+
+/* Circle background effect */
+.animated-header::before,
+.animated-header::after,
+.animated-header .circle1,
+.animated-header .circle2,
+.animated-header .circle3 {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Circles */
+.animated-header .circle1 {
+  width: 120px;
+  height: 120px;
+  top: 20px;
+  left: 20px;
+}
+
+.animated-header .circle2 {
+  width: 180px;
+  height: 180px;
+  top: 40px;
+  right: 60px;
+}
+
+.animated-header .circle3 {
+  width: 90px;
+  height: 90px;
+  bottom: 10px;
+  left: 40%;
+  transform: translateX(-50%);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.styled-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: auto;
+  border: 1px solid #bbdefb;
+}
+
+.form-title {
+  color: #1565c0;
+  font-weight: bold;
+  border-bottom: 2px solid #64b5f6;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1565c0;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group input,
+select {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  grid-column: span 2;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  background: #1565c0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.toggle-button {
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(to right, #2196f3, #21cbf3);
+  box-shadow: 0 4px 14px rgba(33, 150, 243, 0.4);
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+
+.toggle-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #1e88e5, #00bcd4);
+  box-shadow: 0 6px 18px rgba(0, 188, 212, 0.45);
+}
+
+.toggle-button:active {
+  transform: scale(0.98);
+}
+
+.table-container {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  border: 1px solid #cfd8dc;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #cfd8dc;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+td {
+  background-color: #fafafa;
+}
+
+.view-btn,
+.delete-btn {
+  background: #42a5f5;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 3px;
+}
+
+.delete-btn {
+  background: #e53935;
+}
+
+/* .modal-overlay {
+  background-color: linear-gradient(135deg, #e1f5fe, #ffffff); ;
+  color: #1565c0;;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+} */
+
+/* .modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+} */
+.header{
+    color: #1565c0;
+}
+.sideheader{
+    color: #1565c0;
+}
+ 
+/* Change modal background */
+.custom-modal .modal-content {
+    background: linear-gradient(135deg, #e1f5fe, #ffffff) !important; /* Light gray background */
+  border-radius: 12px;                 /* Optional rounded corners */
+  padding: 20px;
+}
+
+/* Optional: Change the modal backdrop color */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent backdrop */
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Search Bar Container */
+.table-container .search-bar {
+  margin-bottom: 16px;
+  padding: 0 12px;
+}
+
+/* Search Input Field */
+/* --- Calendar + Search Bar Styling --- */
+
+/* Container for both inputs */
+
+.fas {
+  color: #1565c0; /* ensures all FA icons use this color by default */
+}
+.date-picker-wrapper .calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #1565c0; /* icon color */
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+.table-container .search-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 12px;
+}
+
+/* Text search input */
+/* Container & Alignment */
+.table-container .search-bar .date-picker-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Date input styles */
+.date-picker-wrapper input[type="date"] {
+  padding: 8px 36px 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* ICON styling */
+.date-picker-wrapper .calendar-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+  font-size: 1.2em;
+}
+
+/* Focus state changes */
+.date-picker-wrapper input[type="date"]:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 6px rgba(0, 102, 204, 0.3);
+  outline: none;
+}
+
+/* Webkit calendar-picker icon (mobile) */
+.date-picker-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Mobile & browser icon overlay support */
+.date-picker-wrapper input[type="date"]::-webkit-inner-spin-button,
+.date-picker-wrapper input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+/* Wrapper & layout */
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+/* Search input styling */
+/* Ensure the search bar container centers its content */
+.table-container .search-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 12px;
+  justify-content: left; /* Center content horizontally */
+}
+
+/* Search wrapper takes 60% width */
+.search-input-wrapper {
+  position: relative;
+  width: 60%;
+  max-width: 400px; /* optional cap */
+}
+
+/* Text input styling */
+.search-input-wrapper input[type="text"] {
+  width: 100%;
+  padding: 8px 12px 8px 36px; /* has left space for icon */
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input-wrapper input[type="text"]:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 6px rgba(21, 101, 192, 0.3);
+  outline: none;
+}
+
+/* Search icon positioning */
+.search-input-wrapper .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #1565c0;
+  pointer-events: none;
+  font-size: 1.2rem;
+}
